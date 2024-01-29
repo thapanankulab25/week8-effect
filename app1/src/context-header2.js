@@ -1,9 +1,12 @@
 import React from 'react';
 import { userContext } from './context';
+import Button from 'react-bootstrap/Button';
+
+
 
 export default class Header2 extends React.Component {
     static contextType = userContext;
-
+    
     render() {
         let[user, setUser] = this.context; 
 
@@ -25,6 +28,7 @@ export default class Header2 extends React.Component {
 
         return (
             <div style={headerStyle}>
+                
                 <a href='#'>Home</a>&nbsp;-&nbsp;
                 <a href='#'>Products</a>&nbsp;-&nbsp;
                 <a href='#'>Contact Us</a>&nbsp;-&nbsp;&nbsp;
@@ -34,6 +38,8 @@ export default class Header2 extends React.Component {
                     : <span>[<a href='#' onClick={onClickSignin}>Signin</a>]</span>
                 }
             </div>
+            
+            
         );
     }
 }

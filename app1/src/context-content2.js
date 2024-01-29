@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { userContext } from './context';
 
 export default function Content2() {
-    const [user, setUser] = useContext(userContext); // Correct way to use context in a functional component
+    let [user, setUser] = React.useContext(userContext); // Correct way to use context in a functional component
 
     const contentStyle = {
         backgroundColor: '#ddd',
@@ -22,6 +22,8 @@ export default function Content2() {
                 ? <span> Hello {user}</span>
                 : <span>Please <a href="#" onClick={onClickSignin}>Signin</a></span>
             }
+            
         </div>
+        
     );
 }
